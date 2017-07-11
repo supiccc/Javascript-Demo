@@ -10,6 +10,7 @@ var guessField = document.querySelector('.guessField');
 
 var guessCount = 1;
 var resetButton; 
+guessField.focus();
 
 function checkGuess() {
     var userGuess = Number(guessField.value); //把输入的参数转换成原始数值
@@ -30,10 +31,12 @@ function checkGuess() {
         setGameOver();
     } else {
         lastResult.textContent = 'Wrong!!!';
-        lastResult.style.backgroundColor = 'red';
+        
         if (userGuess < randomNumber) {
+            lastResult.style.backgroundColor = 'blue';
             lowOrHi.textContent = 'Last guess was too low';
         } else {
+            lastResult.style.backgroundColor = 'red';
             lowOrHi.textContent = 'Last guess was too high';
         }
     }
