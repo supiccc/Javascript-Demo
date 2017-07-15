@@ -21,4 +21,4 @@ function displayMessage() {
     }    
 }
 
-button.onclick = displayMessage;
+button.addEventListener('click', displayMessage);
