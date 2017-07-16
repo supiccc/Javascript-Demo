@@ -18,7 +18,7 @@ function displayMessage() {
 
     closeBtn.onclick = function() {
         panel.parentNode.removeChild(panel);
-    }    
+    }    //匿名函数
 }
 
 button.addEventListener('click', displayMessage);
