@@ -1,7 +1,7 @@
 var button = document.querySelector('button');
 
 
-function displayMessage() {
+function displayMessage(msgText) {
     var html = document.querySelector('html');
 
     var panel = document.createElement('div');
@@ -9,7 +9,7 @@ function displayMessage() {
     html.appendChild(panel);
 
     var msg = document.createElement('p');
-    msg.textContent = "This is a messge box";
+    msg.textContent = msgText;
     panel.appendChild(msg);
 
     var closeBtn = document.createElement('button');
@@ -21,4 +21,9 @@ function displayMessage() {
     }    //匿名函数
 }
 
-button.addEventListener('click', displayMessage);
+//不能使用addEventLisener方法，因为带有参数将会立即显示而不是在动作后调用
+//错误：button.addEventLisener('click', displayMessage("Hello!"));
+//错误：button.onclick = displayMessage("Hello!");
+button.onclick = function() {
+    displayMessage("Woo! This is a new message!");
+} 
