@@ -1,0 +1,45 @@
+body {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.displayed-img {
+    width: 100%;
+    height: 500px;
+}
+
+.full-img {
+    position: relative;
+    /*不能用默认的static，会对overlay造成影响  */
+}
+
+button {
+    position: relative;
+    top: -30px;
+    left: 10px;
+    background-color: rgba(130, 130, 130, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    /*父元素要设置为除static以外的定位  */
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+}
+
+/*缩略图  */
+.img-bar {
+    position: relative;
+    top: -20px;
+}
+/* .small {
+    width: 25%;
+    height: 50px;
+} */
+
+.img-bar img {
+    width: 25%;
+    height: 50px;    
+}
