@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+        var heihei = new Object();
+        request.onload = function() {
+            var superHeroes = request.response;
+            heihei = superHeroes;
+        }
+        //测试：在chrome打开控制台输出heihei；
+    </script>
+</body>
+</html>
